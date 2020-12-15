@@ -19,11 +19,21 @@ export default {
   },
 
   css: [],
-  plugins :[
-   { src: "~plugins/moment.js" },
+  plugins: [
+    {src: "~plugins/moment.js"},
+    {src: "~plugins/axios.js"}
   ],
+
+  axios: {
+    baseURL: 'http://localhost:8070',
+    proxyHeaders: false,
+    credentials: false
+  },
+
   components: true,
-  buildModules : [],
-  modules : [],
-  build : {}
+  buildModules: [],
+  modules: [
+    "@nuxtjs/axios"
+  ],
+  build: {}
 }
